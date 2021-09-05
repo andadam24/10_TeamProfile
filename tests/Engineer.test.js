@@ -9,18 +9,18 @@ describe("Engineer class", () => {
       expect(engineer.email).toEqual("james.bond@test.com");
       expect(engineer.github).toEqual("github.com/bondjamesbond");
     });
-  
+});
+    
+    describe("getGitHub", () => {
+        it("should return the engineer's GitHub",()=> {
+          const engineer = new Engineer("James",007,"james.bond@test.com", "github.com/bondjamesbond" );
+          expect(engineer.github).toEqual("github.com/bondjamesbond");
+        })
+    });
+
     describe("getRole", () => {
       it("should return engineer's role",()=> {
         const engineer = new Engineer("James",007,"james.bond@test.com", "github.com/bondjamesbond" );
         expect(engineer.getRole()).toEqual("Engineer");
       })
     });
-  
-    describe("getGitHub", () => {
-        it("should return the engineer's GitHub",()=> {
-          const engineer = new Engineer("James",007,"james.bond@test.com", "github.com/bondjamesbond" );
-          expect(engineer.github).toEqual("github.com/bondjamesbond");
-        })
-      });
-  });

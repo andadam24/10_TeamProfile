@@ -12,29 +12,29 @@ describe("Employee class", () => {
   
     describe("getName", () => {
       it("should return employee's name",()=> {
-        const employee = new employee("Bart",100,"bart.simpson@test.com" );
+        const employee = new Employee("Bart",100,"bart.simpson@test.com" );
         expect(employee.name).toEqual("Bart");
       })
     });
   
     describe("getEmail", () => {
         it("should return the employee's email",()=> {
-          const employee = new employee("Bart",100,"bart.simpson@test.com" );
+          const employee = new Employee("Bart",100,"bart.simpson@test.com" );
           expect(employee.email).toEqual("bart.simpson@test.com");
         })
-      });
+    });
     
-      describe("getID", () => {
+    describe("getID", () => {
         it("should return the employee's ID",()=> {
-          const employee = new employee("Bart",100,"bart.simpson@test.com" );
+          const employee = new Employee("Bart",100,"bart.simpson@test.com" );
           expect(employee.id).toEqual("100");
         })
-      });
+    });
 
-      describe("getRole", () => {
+    describe("getRole", () => {
         it("should return the employee's role",()=> {
-          const employee = new employee("Bart",100,"bart.simpson@test.com" );
+          const employee = new Employee("Bart",100,"bart.simpson@test.com" );
           expect(employee.getRole()).toEqual("Employee");
         })
-      });
+    });
   });
