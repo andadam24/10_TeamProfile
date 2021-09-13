@@ -5,9 +5,11 @@ const path = require('path')
 const Manager = require('./lib/manager');
 const Engineer = require('./lib/engineer');
 const Intern = require('./lib/intern');
-const renderHTML = require('./lib/html')
+
 
 const team = [];
+
+function addManager () {
 
 inquirer.prompt ([
     {
@@ -31,53 +33,71 @@ inquirer.prompt ([
         name: "managersOfficeNumber"
     },
    
-]}
+])
 .then(answers => {
     const manager = new Manager (answers.managersName, answers.managersId, answers.managersEmail, answers.managerOfficeNumber);
     employees.push(manager);
     
 });
 
-function addEmployee(role) {
+function addEngineer() {
     inquirer.prompt([
         {
             type: 'input',
-            message: "Enter team member's name",
-            name: "employeesName"
+            message: "Enter engineer's name",
+            name: "engineersName"
         },
         {
             type: 'input',
-            message: "Enter team memeber's ID number",
-            name: "employeesId"
+            message: "Enter engineer's ID number",
+            name: "engineersId"
         },
         {
             type: 'input',
-            message: "Enter team member's email address",
-            name: "employeesEmail"
+            message: "Enter engineers's email address",
+            name: "engineersEmail"
+        },
+        {
+            type: 'input',
+            message: "Enter engineer's Github ",
+            name: "enginnersGithub",
+        }
+    ]).then(answers => {
+            const engineer = new Engineer(answers.engineersName, answers.engineersId, answers.engineersEmail, answers.engineersGithub);
+            employees.push(engineer);
+    });
+}
+
+function addIntern() {
+    inquirer.prompt([
+        {
+            type: 'input',
+            message: "Enter intern's name",
+            name: "internsName"
+        },
+        {
+            type: 'input',
+            message: "Enter interns's ID number",
+            name: "internssId"
+        },
+        {
+            type: 'input',
+            message: "Enter intern's email address",
+            name: "internsEmail"
         },
         {
             type: 'input',
             message: "Enter intern's school ",
             name: "internsSchool",
-            when: (role == 'intern')
-        },
-        {
-            type: 'input',
-            message: "Enter engineers Github ",
-            name: "enginnersGithub",
-            when: (role == 'engineer')
         }
-    ]).then((answers)) => {
-        const employee;
-        if (role == 'intern') {
-            employee = new Intern(answers.employeesName, answers.employeesId, answers.employeesEmail, answers.internsSchool);
-        } else if (role == 'engineer') {
-            employee = new Engineer(answers.employeesName, answers.employeesId, answers.employeesEmail, answers.enginnersGithub);
-        }
-        employees.push(employee);
+    ]).then(answers => {
+            const intern = new Intern(answers.internsName, answers.internsId, answers.internsEmail, answers.internsSchool);
+            employees.push(intern);
     });
 }
 
-function renderHTML (employees) {
-    
+function generateHTML(){
+    fs.writeFileSync(generateTeamProfile, "")
+
+    const runHtml = 
 }
