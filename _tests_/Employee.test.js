@@ -5,7 +5,7 @@ describe("Employee class", () => {
       const employee = new Employee("Bart",100,"bart.simpson@test.com" );
 
       expect(employee.name).toEqual("Bart");
-      expect(employee.id).toEqual("100");
+      expect(employee.id).toEqual(100);
       expect(employee.email).toEqual("bart.simpson@test.com");
       
     });
@@ -27,7 +27,7 @@ describe("Employee class", () => {
     describe("getID", () => {
         it("should return the employee's ID",()=> {
           const employee = new Employee("Bart",100,"bart.simpson@test.com" );
-          expect(employee.id).toEqual("100");
+          expect(employee.id).toEqual(100);
         })
     });
 
