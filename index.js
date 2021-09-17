@@ -36,7 +36,7 @@ inquirer.prompt ([
    
 ])
 .then(answers => {
-    const manager = new Manager (answers.managersName, answers.managersId, answers.managersEmail, answers.managerOfficeNumber);
+    const manager = new Manager (answers.managersName, answers.managersId, answers.managersEmail, answers.managersOfficeNumber);
     team.push(manager);
     mainMenu();
     
@@ -62,7 +62,7 @@ function addEngineer() {
         {
             type: 'input',
             message: "Enter engineer's Github ",
-            name: "enginnersGithub",
+            name: "engineersGithub",
         }
     ]).then(answers => {
             const engineer = new Engineer(answers.engineersName, answers.engineersId, answers.engineersEmail, answers.engineersGithub);
