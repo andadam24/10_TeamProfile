@@ -49,7 +49,7 @@ const generateHTML = (teamArr) =>{
 
                                     <li class="list-group-item">${person.id}</li>
                                     <li class="list-group-item">${person.email}</li>
-                                    <li class="list-group-item">${person.school}</li>
+                                    <li class="list-group-item">${person.github}</li>
                                 </ul>
                             </div>
                               
