@@ -26,7 +26,7 @@ This applications allows an office manager to create  a quick Team profile for h
 * THEN I exit the application, and the HTML is generated
 
 ## Video 
-https://drive.google.com/file/d/1QRywgbXWLa-LKHEfZWyylbDnQeZLxA0X/view
+https://drive.google.com/file/d/1FuVhkvs128hJBhMdLUIX6hu2q_rpMtVj/view
 
 ## Links
 https://github.com/andadam24/10_TeamProfile
