@@ -66,7 +66,7 @@ const generateHTML = (teamArr) =>{
 
                                     <li class="list-group-item">ID: ${person.id}</li>
                                     <li class="list-group-item">Email: ${person.email}</li>
-                                    <li class="list-group-item">OfficeNumber: ${person.officeNumer}</li>
+                                    <li class="list-group-item">OfficeNumber: ${person.officeNumber}</li>
                                 </ul>
                             </div>
                               

@@ -1,4 +1,5 @@
 # 10_TeamProfile
+This applications allows an office manager to create  a quick Team profile for his employees utilizing Object Oriented Programming (OOP). 
 
 ## User Story
 * AS A manager
@@ -25,6 +26,7 @@
 * THEN I exit the application, and the HTML is generated
 
 ## Video 
+https://drive.google.com/file/d/1QRywgbXWLa-LKHEfZWyylbDnQeZLxA0X/view
 
 ## Links
 https://github.com/andadam24/10_TeamProfile
