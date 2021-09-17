@@ -47,7 +47,7 @@ const generateHTML = (teamArr) =>{
                                   <p>${person.email}</p>
                                   <p>${person.officeNumber}</p>
                             </div>`
-                })};
+                }})}
     
                 </div>
             </div>

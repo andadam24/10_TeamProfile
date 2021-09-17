@@ -41,7 +41,7 @@ inquirer.prompt ([
     mainMenu();
     
 });
-
+}
 function addEngineer() {
     inquirer.prompt([
         {
@@ -70,7 +70,7 @@ function addEngineer() {
             mainMenu();
     });
 }
-}
+
 function addIntern() {
 
     inquirer.prompt([
@@ -99,7 +99,7 @@ function addIntern() {
             team.push(intern);
             mainMenu();
     });
-}
+};
 
 function mainMenu(){
     inquirer.prompt([
@@ -122,6 +122,7 @@ function mainMenu(){
         }
 });
 }
+addManager();
 
 function saveFile(teamArr){
     const html = generateHTML(teamArr)
