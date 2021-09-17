@@ -23,30 +23,54 @@ const generateHTML = (teamArr) =>{
                 <div class = "team-info">
                 ${teamArr.map(person => {
                     if(person.getRole() === "Intern") {
-                       return `<div>
-                                  <h1>Intern</h1>
-                                  <h2>${person.name}</h2>
-                                  <p>${person.id}</p>
-                                  <p>${person.school}</p>
-                                  <p>${person.email}</p>
+                       return `<div class = "card col-3">
+                                <div class="card-header"
+                                  <h2 class="role text-center">Intern</h2>
+                                  <h3 class="name text-center">${person.name}</h2>
+                                </div>
+                                <div class ="card-body">
+                                    <ul class="list-group">
+
+                                        <li class="list-group-item">${person.id}</li>
+                                        <li class="list-group-item">${person.school}</li>
+                                        <li class="list-group-item">${person.email}</li>
+                                    </ul>
+                                </div>
                                   
                               </div>`
                         } else if (person.getRole() === "Engineer") {
-                            `<div>
-                                  <h1>Engineer</h1>
-                                  <h2>${person.name}</h2>
-                                  <p>${person.id}</p>
-                                  <p>${person.email}</p>
-                                  <p>${person.github}</p>
-                            </div>`
+                            return `<div class = "card col-3">
+                            <div class="card-header"
+                              <h2 class="role text-center">Engineer</h2>
+                              <h3 class="name text-center">${person.name}</h2>
+                            </div>
+                            <div class ="card-body">
+                                <ul class="list-group">
+
+                                    <li class="list-group-item">${person.id}</li>
+                                    <li class="list-group-item">${person.email}</li>
+                                    <li class="list-group-item">${person.school}</li>
+                                </ul>
+                            </div>
+                              
+                          </div>`
+
                         } else if (person.getRole() === "Manager") {
-                            `<div>
-                                  <h1>Manager</h1>
-                                  <h2>${person.name}</h2>
-                                  <p>${person.id}</p>
-                                  <p>${person.email}</p>
-                                  <p>${person.officeNumber}</p>
-                            </div>`
+                            return `<div class = "card col-3">
+                            <div class="card-header"
+                              <h2 class="role text-center">Manager</h2>
+                              <h3 class="name text-center">${person.name}</h2>
+                            </div>
+                            <div class ="card-body">
+                                <ul class="list-group">
+
+                                    <li class="list-group-item">${person.id}</li>
+                                    <li class="list-group-item">${person.email}</li>
+                                    <li class="list-group-item">${person.officeNumer}</li>
+                                </ul>
+                            </div>
+                              
+                          </div>`
                 }})}
     
                 </div>

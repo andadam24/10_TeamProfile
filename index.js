@@ -3,9 +3,9 @@ const fs = require('fs');
 const path = require('path')
 const generateHTML = require('./generateHTML.js')
 
-const Manager = require('./lib/manager');
-const Engineer = require('./lib/engineer');
-const Intern = require('./lib/intern');
+const Manager = require('./lib/Manager');
+const Engineer = require('./lib/Engineer');
+const Intern = require('./lib/Intern');
 
 
 const team = [];
@@ -110,11 +110,11 @@ function mainMenu(){
             name: 'userChoice'    
         }
     ]).then(answers => {
-        switch (answers.action){
-            case "Engineer":
+        switch (answers.userChoice){
+            case "Add an Engineer":
                 addEngineer();
                 break;
-            case "Intern":
+            case "Add an Intern":
                 addIntern();
                 break;
             default:
