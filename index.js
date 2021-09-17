@@ -1,6 +1,7 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 const path = require('path')
+const generateHTML = require('./generateHTML.js')
 
 const Manager = require('./lib/manager');
 const Engineer = require('./lib/engineer');
@@ -36,7 +37,8 @@ inquirer.prompt ([
 ])
 .then(answers => {
     const manager = new Manager (answers.managersName, answers.managersId, answers.managersEmail, answers.managerOfficeNumber);
-    employees.push(manager);
+    team.push(manager);
+    mainMenu();
     
 });
 
@@ -64,11 +66,13 @@ function addEngineer() {
         }
     ]).then(answers => {
             const engineer = new Engineer(answers.engineersName, answers.engineersId, answers.engineersEmail, answers.engineersGithub);
-            employees.push(engineer);
+            team.push(engineer);
+            mainMenu();
     });
 }
-
+}
 function addIntern() {
+
     inquirer.prompt([
         {
             type: 'input',
@@ -78,7 +82,7 @@ function addIntern() {
         {
             type: 'input',
             message: "Enter interns's ID number",
-            name: "internssId"
+            name: "internsId"
         },
         {
             type: 'input',
@@ -92,12 +96,36 @@ function addIntern() {
         }
     ]).then(answers => {
             const intern = new Intern(answers.internsName, answers.internsId, answers.internsEmail, answers.internsSchool);
-            employees.push(intern);
+            team.push(intern);
+            mainMenu();
     });
 }
 
-function generateHTML(){
-    fs.writeFileSync(generateTeamProfile, "")
+function mainMenu(){
+    inquirer.prompt([
+        {
+            type: 'list',
+            message: "What would you like to do next?",
+            choices: ["Add a Manager", "Add an Intern", "Add an Engineer", "Save Team"],
+            name: 'userChoice'    
+        }
+    ]).then(answers => {
+        switch (answers.action){
+            case "Engineer":
+                addEngineer();
+                break;
+            case "Intern":
+                addIntern();
+                break;
+            default:
+                saveFile(team);
+        }
+});
+}
 
-    const runHtml = 
+function saveFile(teamArr){
+    const html = generateHTML(teamArr)
+   fs.writeFileSync("test.html", html)
+
+  
 }
