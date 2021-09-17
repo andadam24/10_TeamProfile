@@ -31,9 +31,9 @@ const generateHTML = (teamArr) =>{
                                 <div class ="card-body">
                                     <ul class="list-group">
 
-                                        <li class="list-group-item">${person.id}</li>
-                                        <li class="list-group-item">${person.school}</li>
-                                        <li class="list-group-item">${person.email}</li>
+                                        <li class="list-group-item"> ID: ${person.id}</li>
+                                        <li class="list-group-item">School: ${person.school}</li>
+                                        <li class="list-group-item">Email: ${person.email}</li>
                                     </ul>
                                 </div>
                                   
@@ -47,9 +47,9 @@ const generateHTML = (teamArr) =>{
                             <div class ="card-body">
                                 <ul class="list-group">
 
-                                    <li class="list-group-item">${person.id}</li>
-                                    <li class="list-group-item">${person.email}</li>
-                                    <li class="list-group-item">${person.github}</li>
+                                    <li class="list-group-item">ID: ${person.id}</li>
+                                    <li class="list-group-item">Email: ${person.email}</li>
+                                    <li class="list-group-item">Github: ${person.github}</li>
                                 </ul>
                             </div>
                               
@@ -64,9 +64,9 @@ const generateHTML = (teamArr) =>{
                             <div class ="card-body">
                                 <ul class="list-group">
 
-                                    <li class="list-group-item">${person.id}</li>
-                                    <li class="list-group-item">${person.email}</li>
-                                    <li class="list-group-item">${person.officeNumer}</li>
+                                    <li class="list-group-item">ID: ${person.id}</li>
+                                    <li class="list-group-item">Email: ${person.email}</li>
+                                    <li class="list-group-item">OfficeNumber: ${person.officeNumer}</li>
                                 </ul>
                             </div>
                               
